@@ -37,12 +37,12 @@ namespace Synth
                 try
                 {
                     using var conn = DB.GetConnection();
-                    using var cmd = new NpgsqlCommand($"DELETE FROM Users WHERE User_ID={User_ID}", conn);
+                    using var cmd = new NpgsqlCommand($"SELECT * FROM FN_DeleteUser({User_ID})", conn);
                     cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "An error occured!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -58,7 +58,7 @@ namespace Synth
             try
             {
                 using var conn = DB.GetConnection();
-                using var cmd = new NpgsqlCommand($"SELECT User_ID, Name, Phone, Username, Is_Admin, Remarks FROM Users " + search, conn);
+                using var cmd = new NpgsqlCommand($"SELECT * FROM FN_GetUsers('{search}')", conn);
                 using NpgsqlDataAdapter sda = new(cmd);
                 DataTable dt = new();
                 sda.Fill(dt);
@@ -67,7 +67,7 @@ namespace Synth
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "An error occured!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -129,7 +129,7 @@ namespace Synth
 
         private void Textbox_Search_TextChanged(object sender, EventArgs e)
         {
-            string search = $"WHERE Name like '%{Textbox_Search.Text}%' OR Username like '%{Textbox_Search.Text}%'";
+            string search = Textbox_Search.Text;
             RefreshDataGridView(search);
         }
     }

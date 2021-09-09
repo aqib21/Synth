@@ -18,13 +18,12 @@ namespace Synth
             try
             {
                 using var conn = DB.GetConnection();
-                using var cmd = new NpgsqlCommand($"UPDATE Users SET Name='{User.Name}', Phone='{User.Phone}', Password='{User.Password}' " +
-                    $"WHERE User_ID={User.User_ID}", conn);
+                using var cmd = new NpgsqlCommand($"SELECT * FROM FN_UpdateProfile('{User.Name}', '{User.Phone}', '{User.Password}', {User.User_ID})", conn);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "An error occured!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

@@ -35,14 +35,15 @@ namespace Synth
             this.Button_Profile = new System.Windows.Forms.Button();
             this.Label_Profile = new System.Windows.Forms.Label();
             this.Panel_Admin = new System.Windows.Forms.Panel();
-            this.Button_Customer = new System.Windows.Forms.Button();
-            this.Label_Customer = new System.Windows.Forms.Label();
+            this.Button_Agent = new System.Windows.Forms.Button();
+            this.Label_Agent = new System.Windows.Forms.Label();
+            this.Button_Sales = new System.Windows.Forms.Button();
+            this.Label_Sales = new System.Windows.Forms.Label();
             this.Button_Staff = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.Label_Staff = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.Label_Login = new System.Windows.Forms.Label();
-            this.Textbox_Search = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Button_Retrieve = new System.Windows.Forms.Button();
             this.Label_Retrieve = new System.Windows.Forms.Label();
@@ -50,6 +51,8 @@ namespace Synth
             this.label5 = new System.Windows.Forms.Label();
             this.Button_Insert = new System.Windows.Forms.Button();
             this.Label_Insert = new System.Windows.Forms.Label();
+            this.Combobox_PNRSearch = new System.Windows.Forms.ComboBox();
+            this.Label_Incorrect = new System.Windows.Forms.Label();
             this.Panel_Admin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,8 +122,10 @@ namespace Synth
             // 
             // Panel_Admin
             // 
-            this.Panel_Admin.Controls.Add(this.Button_Customer);
-            this.Panel_Admin.Controls.Add(this.Label_Customer);
+            this.Panel_Admin.Controls.Add(this.Button_Agent);
+            this.Panel_Admin.Controls.Add(this.Label_Agent);
+            this.Panel_Admin.Controls.Add(this.Button_Sales);
+            this.Panel_Admin.Controls.Add(this.Label_Sales);
             this.Panel_Admin.Controls.Add(this.Button_Staff);
             this.Panel_Admin.Controls.Add(this.label8);
             this.Panel_Admin.Controls.Add(this.Label_Staff);
@@ -132,39 +137,73 @@ namespace Synth
             this.Panel_Admin.TabIndex = 5;
             this.Panel_Admin.Visible = false;
             // 
-            // Button_Customer
+            // Button_Agent
             // 
-            this.Button_Customer.BackColor = System.Drawing.Color.Transparent;
-            this.Button_Customer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_Customer.BackgroundImage")));
-            this.Button_Customer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Button_Customer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_Customer.FlatAppearance.BorderSize = 0;
-            this.Button_Customer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_Customer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Customer.Location = new System.Drawing.Point(303, 74);
-            this.Button_Customer.Name = "Button_Customer";
-            this.Button_Customer.Size = new System.Drawing.Size(100, 100);
-            this.Button_Customer.TabIndex = 18;
-            this.Button_Customer.UseVisualStyleBackColor = false;
-            this.Button_Customer.Click += new System.EventHandler(this.Button_Customer_Click);
+            this.Button_Agent.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Agent.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_Agent.BackgroundImage")));
+            this.Button_Agent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button_Agent.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Agent.FlatAppearance.BorderSize = 0;
+            this.Button_Agent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Agent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Agent.Location = new System.Drawing.Point(493, 74);
+            this.Button_Agent.Name = "Button_Agent";
+            this.Button_Agent.Size = new System.Drawing.Size(100, 100);
+            this.Button_Agent.TabIndex = 20;
+            this.Button_Agent.UseVisualStyleBackColor = false;
+            this.Button_Agent.Click += new System.EventHandler(this.Button_Agent_Click);
             // 
-            // Label_Customer
+            // Label_Agent
             // 
-            this.Label_Customer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Label_Agent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label_Customer.AutoSize = true;
-            this.Label_Customer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Label_Customer.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Label_Customer.Location = new System.Drawing.Point(303, 177);
-            this.Label_Customer.MaximumSize = new System.Drawing.Size(100, 0);
-            this.Label_Customer.MinimumSize = new System.Drawing.Size(100, 0);
-            this.Label_Customer.Name = "Label_Customer";
-            this.Label_Customer.Size = new System.Drawing.Size(100, 34);
-            this.Label_Customer.TabIndex = 17;
-            this.Label_Customer.Text = "Customer Management";
-            this.Label_Customer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Label_Customer.Click += new System.EventHandler(this.Button_Customer_Click);
+            this.Label_Agent.AutoSize = true;
+            this.Label_Agent.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label_Agent.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Label_Agent.Location = new System.Drawing.Point(493, 177);
+            this.Label_Agent.MaximumSize = new System.Drawing.Size(100, 0);
+            this.Label_Agent.MinimumSize = new System.Drawing.Size(100, 0);
+            this.Label_Agent.Name = "Label_Agent";
+            this.Label_Agent.Size = new System.Drawing.Size(100, 34);
+            this.Label_Agent.TabIndex = 19;
+            this.Label_Agent.Text = "Agent Management";
+            this.Label_Agent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Label_Agent.Click += new System.EventHandler(this.Button_Agent_Click);
+            // 
+            // Button_Sales
+            // 
+            this.Button_Sales.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Sales.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_Sales.BackgroundImage")));
+            this.Button_Sales.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button_Sales.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Sales.FlatAppearance.BorderSize = 0;
+            this.Button_Sales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Sales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Sales.Location = new System.Drawing.Point(303, 74);
+            this.Button_Sales.Name = "Button_Sales";
+            this.Button_Sales.Size = new System.Drawing.Size(100, 100);
+            this.Button_Sales.TabIndex = 18;
+            this.Button_Sales.UseVisualStyleBackColor = false;
+            this.Button_Sales.Click += new System.EventHandler(this.Button_Sales_Click);
+            // 
+            // Label_Sales
+            // 
+            this.Label_Sales.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Label_Sales.AutoSize = true;
+            this.Label_Sales.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label_Sales.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Label_Sales.Location = new System.Drawing.Point(303, 177);
+            this.Label_Sales.MaximumSize = new System.Drawing.Size(100, 0);
+            this.Label_Sales.MinimumSize = new System.Drawing.Size(100, 0);
+            this.Label_Sales.Name = "Label_Sales";
+            this.Label_Sales.Size = new System.Drawing.Size(100, 34);
+            this.Label_Sales.TabIndex = 17;
+            this.Label_Sales.Text = "Sales Management";
+            this.Label_Sales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Label_Sales.Click += new System.EventHandler(this.Button_Sales_Click);
             // 
             // Button_Staff
             // 
@@ -229,14 +268,6 @@ namespace Synth
             this.Label_Login.Size = new System.Drawing.Size(209, 41);
             this.Label_Login.TabIndex = 6;
             this.Label_Login.Text = "User Module";
-            // 
-            // Textbox_Search
-            // 
-            this.Textbox_Search.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Textbox_Search.Location = new System.Drawing.Point(123, 127);
-            this.Textbox_Search.Name = "Textbox_Search";
-            this.Textbox_Search.Size = new System.Drawing.Size(280, 24);
-            this.Textbox_Search.TabIndex = 7;
             // 
             // label2
             // 
@@ -333,12 +364,33 @@ namespace Synth
             this.Label_Insert.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Label_Insert.Click += new System.EventHandler(this.Button_Insert_Click);
             // 
+            // Combobox_PNRSearch
+            // 
+            this.Combobox_PNRSearch.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Combobox_PNRSearch.FormattingEnabled = true;
+            this.Combobox_PNRSearch.Location = new System.Drawing.Point(123, 127);
+            this.Combobox_PNRSearch.Name = "Combobox_PNRSearch";
+            this.Combobox_PNRSearch.Size = new System.Drawing.Size(280, 23);
+            this.Combobox_PNRSearch.TabIndex = 15;
+            // 
+            // Label_Incorrect
+            // 
+            this.Label_Incorrect.AutoSize = true;
+            this.Label_Incorrect.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Label_Incorrect.ForeColor = System.Drawing.Color.Maroon;
+            this.Label_Incorrect.Location = new System.Drawing.Point(123, 153);
+            this.Label_Incorrect.Name = "Label_Incorrect";
+            this.Label_Incorrect.Size = new System.Drawing.Size(0, 17);
+            this.Label_Incorrect.TabIndex = 16;
+            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.Label_Incorrect);
+            this.Controls.Add(this.Combobox_PNRSearch);
             this.Controls.Add(this.Button_Insert);
             this.Controls.Add(this.Label_Insert);
             this.Controls.Add(this.label5);
@@ -346,7 +398,6 @@ namespace Synth
             this.Controls.Add(this.Button_Retrieve);
             this.Controls.Add(this.Label_Retrieve);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.Textbox_Search);
             this.Controls.Add(this.Label_Login);
             this.Controls.Add(this.Panel_Admin);
             this.Controls.Add(this.Button_Profile);
@@ -354,6 +405,7 @@ namespace Synth
             this.Controls.Add(this.Button_Logout);
             this.Controls.Add(this.Label_Logout);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -375,7 +427,6 @@ namespace Synth
         private System.Windows.Forms.Label Label_Profile;
         private System.Windows.Forms.Panel Panel_Admin;
         private System.Windows.Forms.Label Label_Login;
-        private System.Windows.Forms.TextBox Textbox_Search;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Button_Retrieve;
         private System.Windows.Forms.Label Label_Retrieve;
@@ -385,9 +436,13 @@ namespace Synth
         private System.Windows.Forms.Label Label_Insert;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button Button_Customer;
-        private System.Windows.Forms.Label Label_Customer;
+        private System.Windows.Forms.Button Button_Sales;
+        private System.Windows.Forms.Label Label_Sales;
         private System.Windows.Forms.Button Button_Staff;
         private System.Windows.Forms.Label Label_Staff;
+        private System.Windows.Forms.Button Button_Agent;
+        private System.Windows.Forms.Label Label_Agent;
+        private System.Windows.Forms.ComboBox Combobox_PNRSearch;
+        private System.Windows.Forms.Label Label_Incorrect;
     }
 }

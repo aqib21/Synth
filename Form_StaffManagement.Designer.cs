@@ -69,7 +69,7 @@ namespace Synth
             this.Button_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button_Delete.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Button_Delete.ForeColor = System.Drawing.Color.White;
-            this.Button_Delete.Location = new System.Drawing.Point(315, 88);
+            this.Button_Delete.Location = new System.Drawing.Point(314, 63);
             this.Button_Delete.Name = "Button_Delete";
             this.Button_Delete.Size = new System.Drawing.Size(75, 25);
             this.Button_Delete.TabIndex = 1;
@@ -85,7 +85,7 @@ namespace Synth
             this.Button_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button_Edit.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Button_Edit.ForeColor = System.Drawing.Color.White;
-            this.Button_Edit.Location = new System.Drawing.Point(234, 88);
+            this.Button_Edit.Location = new System.Drawing.Point(233, 63);
             this.Button_Edit.Name = "Button_Edit";
             this.Button_Edit.Size = new System.Drawing.Size(75, 25);
             this.Button_Edit.TabIndex = 2;
@@ -101,7 +101,7 @@ namespace Synth
             this.Button_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button_Add.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Button_Add.ForeColor = System.Drawing.Color.White;
-            this.Button_Add.Location = new System.Drawing.Point(153, 88);
+            this.Button_Add.Location = new System.Drawing.Point(152, 63);
             this.Button_Add.Name = "Button_Add";
             this.Button_Add.Size = new System.Drawing.Size(75, 25);
             this.Button_Add.TabIndex = 3;
@@ -112,7 +112,7 @@ namespace Synth
             // Textbox_Search
             // 
             this.Textbox_Search.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Textbox_Search.Location = new System.Drawing.Point(153, 49);
+            this.Textbox_Search.Location = new System.Drawing.Point(152, 33);
             this.Textbox_Search.Name = "Textbox_Search";
             this.Textbox_Search.Size = new System.Drawing.Size(340, 24);
             this.Textbox_Search.TabIndex = 4;
@@ -136,7 +136,7 @@ namespace Synth
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(153, 29);
+            this.label2.Location = new System.Drawing.Point(152, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 17);
             this.label2.TabIndex = 9;
@@ -156,7 +156,7 @@ namespace Synth
             this.Label_Incorrect.AutoSize = true;
             this.Label_Incorrect.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Label_Incorrect.ForeColor = System.Drawing.Color.Maroon;
-            this.Label_Incorrect.Location = new System.Drawing.Point(396, 93);
+            this.Label_Incorrect.Location = new System.Drawing.Point(152, 96);
             this.Label_Incorrect.Name = "Label_Incorrect";
             this.Label_Incorrect.Size = new System.Drawing.Size(0, 17);
             this.Label_Incorrect.TabIndex = 11;
@@ -177,6 +177,7 @@ namespace Synth
             this.Controls.Add(this.Button_Delete);
             this.Controls.Add(this.DataGridView_Staff);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form_StaffManagement";
             this.Text = "Staff Management";

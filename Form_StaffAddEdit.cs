@@ -27,7 +27,7 @@ namespace Synth
                 try
                 {
                     using var conn = DB.GetConnection();
-                    using var cmd = new NpgsqlCommand($"SELECT Name, Phone, Username, Is_Admin, Remarks FROM Users WHERE User_Id = {user_id_edit}", conn);
+                    using var cmd = new NpgsqlCommand($"SELECT * FROM FN_GetUser({user_id_edit})", conn);
                     using var reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
@@ -41,13 +41,27 @@ namespace Synth
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "An error occured!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
                     DB.Dispose();
                 }
             }
+        }
+        private void ClearTextBoxes()
+        {
+            static void func(Control.ControlCollection controls)
+            {
+                foreach (Control control in controls)
+                    if (control is TextBox)
+                        (control as TextBox).Clear();
+                    else if (control is CheckBox)
+                        (control as CheckBox).Checked = false;
+                    else
+                        func(control.Controls);
+            }
+            func(Controls);
         }
 
         private void Button_Save_Click(object sender, EventArgs e)
@@ -69,26 +83,26 @@ namespace Synth
                 using var conn = DB.GetConnection();
                 if (user_id_edit == 0)
                 {
-                    using var cmd = new NpgsqlCommand($"INSERT INTO Users (name, phone, username, password, is_admin, remarks) Values (" +
-                        $"'{name}', '{phone}', '{username}', '{username}', {is_admin}, '{remarks}')", conn);
+                    using var cmd = new NpgsqlCommand($"SELECT * FROM FN_InsertUser('{name}', '{phone}', '{username}', '{username}', {is_admin}, '{remarks}')", conn);
                     cmd.ExecuteNonQuery();
                 }
                 else
                 {
-                    using var cmd = new NpgsqlCommand($"UPDATE Users SET name = '{name}', phone = '{phone}', username = '{username}', " +
-                        $"password = '{username}', is_admin = {is_admin}, remarks = '{remarks}' WHERE User_ID = {user_id_edit}", conn);
+                    using var cmd = new NpgsqlCommand($"SELECT * FROM FN_UpdateUser('{name}', '{phone}', '{username}', '{username}', {is_admin}, '{remarks}', {user_id_edit})", conn);
                     cmd.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Label_Incorrect.Text = ex.Message;
             }
             finally
             {
                 DB.Dispose();
                 form_StaffManagement.RefreshDataGridView("");
-                this.Close();
+                ClearTextBoxes();
+
+                if (user_id_edit != 0) this.Close();
             }
         }
     }

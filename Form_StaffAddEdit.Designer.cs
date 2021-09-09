@@ -182,7 +182,7 @@ namespace Synth
             this.Button_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button_Cancel.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Button_Cancel.ForeColor = System.Drawing.Color.White;
-            this.Button_Cancel.Location = new System.Drawing.Point(93, 431);
+            this.Button_Cancel.Location = new System.Drawing.Point(393, 431);
             this.Button_Cancel.Name = "Button_Cancel";
             this.Button_Cancel.Size = new System.Drawing.Size(75, 25);
             this.Button_Cancel.TabIndex = 7;
@@ -198,7 +198,7 @@ namespace Synth
             this.Button_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button_Save.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Button_Save.ForeColor = System.Drawing.Color.White;
-            this.Button_Save.Location = new System.Drawing.Point(12, 431);
+            this.Button_Save.Location = new System.Drawing.Point(312, 431);
             this.Button_Save.Name = "Button_Save";
             this.Button_Save.Size = new System.Drawing.Size(75, 25);
             this.Button_Save.TabIndex = 6;
@@ -211,7 +211,7 @@ namespace Synth
             this.Label_Incorrect.AutoSize = true;
             this.Label_Incorrect.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Label_Incorrect.ForeColor = System.Drawing.Color.Maroon;
-            this.Label_Incorrect.Location = new System.Drawing.Point(174, 436);
+            this.Label_Incorrect.Location = new System.Drawing.Point(11, 436);
             this.Label_Incorrect.Name = "Label_Incorrect";
             this.Label_Incorrect.Size = new System.Drawing.Size(0, 17);
             this.Label_Incorrect.TabIndex = 29;
@@ -237,6 +237,7 @@ namespace Synth
             this.Controls.Add(this.Textbox_Name);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_StaffAddEdit";
