@@ -41,13 +41,27 @@ namespace Synth
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "An error occured!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
                     DB.Dispose();
                 }
             }
+        }
+        private void ClearTextBoxes()
+        {
+            static void func(Control.ControlCollection controls)
+            {
+                foreach (Control control in controls)
+                    if (control is TextBox)
+                        (control as TextBox).Clear();
+                    else if (control is CheckBox)
+                        (control as CheckBox).Checked = false;
+                    else
+                        func(control.Controls);
+            }
+            func(Controls);
         }
 
         private void Button_Save_Click(object sender, EventArgs e)
@@ -69,7 +83,7 @@ namespace Synth
                 using var conn = DB.GetConnection();
                 if (user_id_edit == 0)
                 {
-                    using var cmd = new NpgsqlCommand($"INSERT INTO Users (name, phone, username, password, is_admin, remarks) Values (" +
+                    using var cmd = new NpgsqlCommand($"INSERT INTO Users (name, phone, username, password, is_admin, remarks, updated_by) Values (" +
                         $"'{name}', '{phone}', '{username}', '{username}', {is_admin}, '{remarks}')", conn);
                     cmd.ExecuteNonQuery();
                 }
@@ -82,13 +96,15 @@ namespace Synth
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Label_Incorrect.Text = ex.Message;
             }
             finally
             {
                 DB.Dispose();
                 form_StaffManagement.RefreshDataGridView("");
-                this.Close();
+                ClearTextBoxes();
+
+                if (user_id_edit != 0) this.Close();
             }
         }
     }

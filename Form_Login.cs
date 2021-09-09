@@ -57,7 +57,7 @@ namespace Synth
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "An error occured!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -80,10 +80,7 @@ namespace Synth
 
         private void Form_Login_Load(object sender, EventArgs e)
         {
-            Textbox_Username.TabIndex = 1;
-            Textbox_Password.TabIndex = 2;
-            Button_Login.TabIndex = 3;
-            Button_Close.TabStop = false;
+            Label_Version.Text += "1.1.3";
         }
     }
 }

@@ -34,7 +34,7 @@ namespace Synth
             this.Textbox_Username = new System.Windows.Forms.TextBox();
             this.Textbox_Password = new System.Windows.Forms.TextBox();
             this.Button_Login = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Label_Version = new System.Windows.Forms.Label();
             this.Label_Incorrect = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@ namespace Synth
             this.Panel_login.Controls.Add(this.Textbox_Username);
             this.Panel_login.Controls.Add(this.Textbox_Password);
             this.Panel_login.Controls.Add(this.Button_Login);
-            this.Panel_login.Controls.Add(this.label4);
+            this.Panel_login.Controls.Add(this.Label_Version);
             this.Panel_login.Controls.Add(this.Label_Incorrect);
             this.Panel_login.Controls.Add(this.pictureBox1);
             this.Panel_login.Controls.Add(this.label2);
@@ -70,7 +70,7 @@ namespace Synth
             this.Textbox_Username.Location = new System.Drawing.Point(420, 176);
             this.Textbox_Username.Name = "Textbox_Username";
             this.Textbox_Username.Size = new System.Drawing.Size(322, 24);
-            this.Textbox_Username.TabIndex = 2;
+            this.Textbox_Username.TabIndex = 1;
             this.Textbox_Username.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Textbox_KeyUp);
             // 
             // Textbox_Password
@@ -80,7 +80,7 @@ namespace Synth
             this.Textbox_Password.Name = "Textbox_Password";
             this.Textbox_Password.PasswordChar = '●';
             this.Textbox_Password.Size = new System.Drawing.Size(322, 24);
-            this.Textbox_Password.TabIndex = 3;
+            this.Textbox_Password.TabIndex = 2;
             this.Textbox_Password.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Textbox_KeyUp);
             // 
             // Button_Login
@@ -94,21 +94,21 @@ namespace Synth
             this.Button_Login.Location = new System.Drawing.Point(420, 300);
             this.Button_Login.Name = "Button_Login";
             this.Button_Login.Size = new System.Drawing.Size(75, 25);
-            this.Button_Login.TabIndex = 0;
+            this.Button_Login.TabIndex = 3;
             this.Button_Login.Text = "Login";
             this.Button_Login.UseVisualStyleBackColor = false;
             this.Button_Login.Click += new System.EventHandler(this.Button_Login_Click);
             // 
-            // label4
+            // Label_Version
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(707, 474);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 17);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Version 1.0.0";
+            this.Label_Version.AutoSize = true;
+            this.Label_Version.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Label_Version.ForeColor = System.Drawing.Color.Black;
+            this.Label_Version.Location = new System.Drawing.Point(690, 474);
+            this.Label_Version.Name = "Label_Version";
+            this.Label_Version.Size = new System.Drawing.Size(52, 17);
+            this.Label_Version.TabIndex = 9;
+            this.Label_Version.Text = "Version ";
             // 
             // Label_Incorrect
             // 
@@ -178,6 +178,7 @@ namespace Synth
             this.Button_Close.Name = "Button_Close";
             this.Button_Close.Size = new System.Drawing.Size(25, 25);
             this.Button_Close.TabIndex = 10;
+            this.Button_Close.TabStop = false;
             this.Button_Close.UseVisualStyleBackColor = false;
             this.Button_Close.Click += new System.EventHandler(this.Button_Close_Click);
             // 
@@ -190,9 +191,10 @@ namespace Synth
             this.ClientSize = new System.Drawing.Size(800, 500);
             this.Controls.Add(this.Panel_login);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Synth";
             this.Load += new System.EventHandler(this.Form_Login_Load);
             this.Panel_login.ResumeLayout(false);
             this.Panel_login.PerformLayout();
@@ -211,7 +213,7 @@ namespace Synth
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Label_Version;
         private System.Windows.Forms.Label Label_Incorrect;
         private System.Windows.Forms.Button Button_Close;
     }

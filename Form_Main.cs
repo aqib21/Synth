@@ -67,7 +67,15 @@ namespace Synth
 
         private void Button_Insert_Click(object sender, EventArgs e)
         {
-
+            if (!Application.OpenForms.OfType<Form_SalesAddEdit>().Any())
+            {
+                Form_SalesAddEdit form_SalesAddEdit = new(0, null);
+                form_SalesAddEdit.Show();
+            }
+            else
+            {
+                Application.OpenForms["Form_SalesAddEdit"].BringToFront();
+            }
         }
 
         private void Button_Staff_Click(object sender, EventArgs e)
@@ -83,14 +91,35 @@ namespace Synth
             }
         }
 
-        private void Button_Customer_Click(object sender, EventArgs e)
+        private void Button_Sales_Click(object sender, EventArgs e)
         {
-
+            if (!Application.OpenForms.OfType<Form_SalesManagement>().Any())
+            {
+                Form_SalesManagement form_SalesManagement = new();
+                form_SalesManagement.Show();
+            }
+            else
+            {
+                Application.OpenForms["Form_SalesManagement"].BringToFront();
+            }
         }
 
         private void Form_Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void Button_Agent_Click(object sender, EventArgs e)
+        {
+            if (!Application.OpenForms.OfType<Form_AgentManagement>().Any())
+            {
+                Form_AgentManagement form_AgentManagement = new();
+                form_AgentManagement.Show();
+            }
+            else
+            {
+                Application.OpenForms["Form_AgentManagement"].BringToFront();
+            }
         }
     }
 }
