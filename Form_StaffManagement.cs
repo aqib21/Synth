@@ -21,6 +21,13 @@ namespace Synth
         private void Button_Delete_Click(object sender, EventArgs e)
         {
             Label_Incorrect.Text = "";
+
+            if (DataGridView_Staff.SelectedRows.Count == 0)
+            {
+                Label_Incorrect.Text = "Select a record to delete.";
+                return;
+            }
+
             int User_ID = int.Parse(DataGridView_Staff.Rows[DataGridView_Staff.CurrentRow.Index].Cells[0].Value.ToString());
 
             if (User_ID == User.User_ID)
@@ -78,6 +85,13 @@ namespace Synth
         private void Button_Edit_Click(object sender, EventArgs e)
         {
             Label_Incorrect.Text = "";
+
+            if (DataGridView_Staff.SelectedRows.Count == 0)
+            {
+                Label_Incorrect.Text = "Select a record to edit.";
+                return;
+            }
+
             int User_ID = int.Parse(DataGridView_Staff.Rows[DataGridView_Staff.CurrentRow.Index].Cells[0].Value.ToString());
 
             if (User_ID == User.User_ID)

@@ -138,9 +138,9 @@ namespace Synth
             this.label2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(152, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 17);
+            this.label2.Size = new System.Drawing.Size(249, 17);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Enter Name or Username";
+            this.label2.Text = "Enter Name, Username or Phone to search";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // richTextBox1

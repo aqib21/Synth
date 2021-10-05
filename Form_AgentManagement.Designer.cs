@@ -62,9 +62,9 @@ namespace Synth
             this.label2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(153, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 17);
+            this.label2.Size = new System.Drawing.Size(131, 17);
             this.label2.TabIndex = 26;
-            this.label2.Text = "Enter Name or Username";
+            this.label2.Text = "Enter Name to search";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1

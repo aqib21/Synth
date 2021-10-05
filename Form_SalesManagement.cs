@@ -46,6 +46,13 @@ namespace Synth
         private void Button_Delete_Click(object sender, EventArgs e)
         {
             Label_Incorrect.Text = "";
+
+            if (DataGridView_Sales.SelectedRows.Count == 0)
+            {
+                Label_Incorrect.Text = "Select a record to delete.";
+                return;
+            }
+
             int Sale_ID = int.Parse(DataGridView_Sales.Rows[DataGridView_Sales.CurrentRow.Index].Cells[0].Value.ToString());
 
             var confirmResult = MessageBox.Show("Are you sure to delete this sale?",
@@ -89,6 +96,13 @@ namespace Synth
         private void Button_Edit_Click(object sender, EventArgs e)
         {
             Label_Incorrect.Text = "";
+
+            if (DataGridView_Sales.SelectedRows.Count == 0)
+            {
+                Label_Incorrect.Text = "Select a record to edit.";
+                return;
+            }
+
             int Sales_ID = int.Parse(DataGridView_Sales.Rows[DataGridView_Sales.CurrentRow.Index].Cells[0].Value.ToString());
 
             if (!Application.OpenForms.OfType<Form_SalesAddEdit>().Any())
@@ -116,6 +130,12 @@ namespace Synth
 
         private void Button_Export_Click(object sender, EventArgs e)
         {
+            if (DataGridView_Sales.SelectedRows.Count == 0)
+            {
+                Label_Incorrect.Text = "You have no records to export.";
+                return;
+            }
+
             try
             {
                 DataTable dt = new();
@@ -154,6 +174,12 @@ namespace Synth
 
         private void Button_Print_Click(object sender, EventArgs e)
         {
+            if (DataGridView_Sales.SelectedRows.Count == 0)
+            {
+                Label_Incorrect.Text = "Select a record to print.";
+                return;
+            }
+
             int Sales_ID = int.Parse(DataGridView_Sales.Rows[DataGridView_Sales.CurrentRow.Index].Cells[0].Value.ToString());
             if (!Application.OpenForms.OfType<Form_ViewSale>().Any())
             {

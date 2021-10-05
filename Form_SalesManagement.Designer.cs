@@ -64,9 +64,9 @@ namespace Synth
             this.label2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(153, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 17);
+            this.label2.Size = new System.Drawing.Size(215, 17);
             this.label2.TabIndex = 18;
-            this.label2.Text = "Enter Name or Username";
+            this.label2.Text = "Enter PRN, Name or Phone to search";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
@@ -154,7 +154,7 @@ namespace Synth
             this.DataGridView_Sales.RowHeadersVisible = false;
             this.DataGridView_Sales.RowTemplate.Height = 25;
             this.DataGridView_Sales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridView_Sales.Size = new System.Drawing.Size(760, 319);
+            this.DataGridView_Sales.Size = new System.Drawing.Size(1210, 319);
             this.DataGridView_Sales.TabIndex = 12;
             // 
             // Button_Export
@@ -192,7 +192,7 @@ namespace Synth
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ClientSize = new System.Drawing.Size(1234, 461);
             this.Controls.Add(this.Button_Print);
             this.Controls.Add(this.Button_Export);
             this.Controls.Add(this.Label_Incorrect);

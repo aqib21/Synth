@@ -58,6 +58,13 @@ namespace Synth
         private void Button_Edit_Click(object sender, EventArgs e)
         {
             Label_Incorrect.Text = "";
+
+            if (DataGridView_Agent.SelectedRows.Count == 0)
+            {
+                Label_Incorrect.Text = "Select a record to edit.";
+                return;
+            }
+
             int Agent_ID = int.Parse(DataGridView_Agent.Rows[DataGridView_Agent.CurrentRow.Index].Cells[0].Value.ToString());
 
             if (!Application.OpenForms.OfType<Form_AgentAddEdit>().Any())
@@ -74,6 +81,13 @@ namespace Synth
         private void Button_Delete_Click(object sender, EventArgs e)
         {
             Label_Incorrect.Text = "";
+
+            if (DataGridView_Agent.SelectedRows.Count == 0)
+            {
+                Label_Incorrect.Text = "Select a record to delete.";
+                return;
+            }
+
             int Agent_ID = int.Parse(DataGridView_Agent.Rows[DataGridView_Agent.CurrentRow.Index].Cells[0].Value.ToString());
 
             var confirmResult = MessageBox.Show("Are you sure to delete this agent?",
