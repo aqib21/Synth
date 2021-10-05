@@ -28,7 +28,7 @@ namespace Synth
                 using var conn = DB.GetConnection();
                 using var cmd = new NpgsqlCommand($"SELECT * FROM FN_GetSales('{search}')", conn);
                 using NpgsqlDataAdapter sda = new(cmd);
-                System.Data.DataTable dt = new();
+                DataTable dt = new();
                 sda.Fill(dt);
 
                 DataGridView_Sales.DataSource = dt;
@@ -149,6 +149,20 @@ namespace Synth
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "An error occured!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Button_Print_Click(object sender, EventArgs e)
+        {
+            int Sales_ID = int.Parse(DataGridView_Sales.Rows[DataGridView_Sales.CurrentRow.Index].Cells[0].Value.ToString());
+            if (!Application.OpenForms.OfType<Form_ViewSale>().Any())
+            {
+                Form_ViewSale form_ViewSale = new(Sales_ID);
+                form_ViewSale.Show();
+            }
+            else
+            {
+                Application.OpenForms["Form_ViewSale"].BringToFront();
             }
         }
     }

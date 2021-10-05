@@ -39,6 +39,7 @@ namespace Synth
             this.Button_Delete = new System.Windows.Forms.Button();
             this.DataGridView_Sales = new System.Windows.Forms.DataGridView();
             this.Button_Export = new System.Windows.Forms.Button();
+            this.Button_Print = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_Sales)).BeginInit();
             this.SuspendLayout();
@@ -158,16 +159,33 @@ namespace Synth
             // 
             // Button_Export
             // 
-            this.Button_Export.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_Export.BackgroundImage")));
+            this.Button_Export.BackColor = System.Drawing.Color.Crimson;
             this.Button_Export.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button_Export.FlatAppearance.BorderSize = 0;
             this.Button_Export.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_Export.Location = new System.Drawing.Point(468, 68);
+            this.Button_Export.ForeColor = System.Drawing.Color.White;
+            this.Button_Export.Location = new System.Drawing.Point(494, 68);
             this.Button_Export.Name = "Button_Export";
-            this.Button_Export.Size = new System.Drawing.Size(25, 25);
+            this.Button_Export.Size = new System.Drawing.Size(75, 25);
             this.Button_Export.TabIndex = 20;
-            this.Button_Export.UseVisualStyleBackColor = true;
+            this.Button_Export.Text = "Export";
+            this.Button_Export.UseVisualStyleBackColor = false;
             this.Button_Export.Click += new System.EventHandler(this.Button_Export_Click);
+            // 
+            // Button_Print
+            // 
+            this.Button_Print.BackColor = System.Drawing.Color.Crimson;
+            this.Button_Print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button_Print.FlatAppearance.BorderSize = 0;
+            this.Button_Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Print.ForeColor = System.Drawing.Color.White;
+            this.Button_Print.Location = new System.Drawing.Point(575, 68);
+            this.Button_Print.Name = "Button_Print";
+            this.Button_Print.Size = new System.Drawing.Size(75, 25);
+            this.Button_Print.TabIndex = 21;
+            this.Button_Print.Text = "Print";
+            this.Button_Print.UseVisualStyleBackColor = false;
+            this.Button_Print.Click += new System.EventHandler(this.Button_Print_Click);
             // 
             // Form_SalesManagement
             // 
@@ -175,6 +193,7 @@ namespace Synth
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.Button_Print);
             this.Controls.Add(this.Button_Export);
             this.Controls.Add(this.Label_Incorrect);
             this.Controls.Add(this.label2);
@@ -209,5 +228,6 @@ namespace Synth
         private System.Windows.Forms.Button Button_Delete;
         private System.Windows.Forms.DataGridView DataGridView_Sales;
         private System.Windows.Forms.Button Button_Export;
+        private System.Windows.Forms.Button Button_Print;
     }
 }

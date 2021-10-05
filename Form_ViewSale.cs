@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using Npgsql;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using Npgsql;
 using System.Windows.Forms;
 
 namespace Synth
@@ -67,10 +62,12 @@ namespace Synth
         {
             Button_Close.Visible = false;
             Button_Print.Visible = false;
+
             CaptureScreen();
             PrintPreviewDialog.Document = PrintDocument;
             PrintPreviewDialog.PrintPreviewControl.Zoom = 1;
             PrintPreviewDialog.ShowDialog();
+
             Button_Close.Visible = true;
             Button_Print.Visible = true;
         }

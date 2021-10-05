@@ -698,7 +698,7 @@ namespace Synth
             // 
             this.DateTimePicker_Payment1.Enabled = false;
             this.DateTimePicker_Payment1.Location = new System.Drawing.Point(654, 66);
-            this.DateTimePicker_Payment1.MinDate = new System.DateTime(2021, 10, 5, 0, 0, 0, 0);
+            this.DateTimePicker_Payment1.MinDate = new System.DateTime(1953, 1, 1, 0, 0, 0, 0);
             this.DateTimePicker_Payment1.Name = "DateTimePicker_Payment1";
             this.DateTimePicker_Payment1.Size = new System.Drawing.Size(322, 23);
             this.DateTimePicker_Payment1.TabIndex = 12;
