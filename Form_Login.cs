@@ -80,7 +80,7 @@ namespace Synth
 
         private void Form_Login_Load(object sender, EventArgs e)
         {
-            Label_Version.Text += "1.3.7";
+            Label_Version.Text += "1.3.10";
         }
     }
 }

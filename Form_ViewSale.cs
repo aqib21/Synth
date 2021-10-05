@@ -29,17 +29,19 @@ namespace Synth
                 using var reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    Label_Title.Text = $"PNR {reader[3]}";
+                    Label_Date.Text = DateTime.Now.ToShortDateString();
+                    Label_Time.Text = DateTime.Now.ToShortTimeString();
+                    Label_PNR.Text = reader[3].ToString();
                     Label_FullName.Text = $"{reader[1]} {reader[0]}";
                     Label_Phone.Text = reader[2].ToString();
                     Label_IssueDate.Text = DateTime.Parse(reader[4].ToString()).ToShortDateString();
                     Label_Agent.Text = reader[5].ToString();
-                    Label_Price.Text = $"SAR {reader[6]} (Issue Price)\nSAR {reader[7]} (Sale Price)";
+                    Label_Price.Text = $"SAR {reader[6]}";
                     Label_Installment1.Text = reader[10].ToString() == "0" ? "N/A" : $"SAR {reader[10]} on {DateTime.Parse(reader[11].ToString()).ToShortDateString()}";
                     Label_Installment2.Text = reader[12].ToString() == "0" ? "N/A" : $"SAR {reader[12]} on {DateTime.Parse(reader[13].ToString()).ToShortDateString()}";
                     Label_AmountPaid.Text = reader[9].ToString() == "0" ? "N/A" : $"SAR {reader[9]}";
                     Label_DueAmount.Text = reader[14].ToString() == "0" ? "Fully Paid" : $"SAR {reader[14]}";
-                    Label_PCRPrice.Text = reader[15].ToString() == "0" ? "N/A" : $"SAR {reader[15]} (Issue Price)\nSAR {reader[16]} (Sale Price)";
+                    Label_PCRPrice.Text = reader[15].ToString() == "0" ? "N/A" : $"SAR {reader[15]}";
                 }
                 reader.Close();
             }
