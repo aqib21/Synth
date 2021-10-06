@@ -79,6 +79,12 @@ namespace Synth
             finally
             {
                 DB.Dispose();
+                DataGridView_Staff.Columns[0].HeaderText = "Staff ID";
+                DataGridView_Staff.Columns[1].HeaderText = "Name";
+                DataGridView_Staff.Columns[0].HeaderText = "Phone";
+                DataGridView_Staff.Columns[0].HeaderText = "Username";
+                DataGridView_Staff.Columns[0].HeaderText = "Admin";
+                DataGridView_Staff.Columns[0].HeaderText = "Remarks";
             }
         }
 

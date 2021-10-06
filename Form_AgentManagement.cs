@@ -37,6 +37,8 @@ namespace Synth
             finally
             {
                 DB.Dispose();
+                DataGridView_Agent.Columns[0].HeaderText = "Agent ID";
+                DataGridView_Agent.Columns[1].HeaderText = "Agent Name";
             }
         }
 

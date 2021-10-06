@@ -8,7 +8,8 @@
 
   <ItemGroup>
     <PackageReference Include="ClosedXML" Version="0.95.4" />
-    <PackageReference Include="Npgsql" Version="5.0.7" />
+    <PackageReference Include="DeviceId.Windows.Wmi" Version="6.1.0" />
+    <PackageReference Include="Npgsql" Version="5.0.10" />
   </ItemGroup>
 
   <ItemGroup>

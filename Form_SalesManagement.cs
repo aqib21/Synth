@@ -40,6 +40,25 @@ namespace Synth
             finally
             {
                 DB.Dispose();
+                DataGridView_Sales.Columns[0].HeaderText = "Sale ID";
+                DataGridView_Sales.Columns[1].HeaderText = "Last Name";
+                DataGridView_Sales.Columns[2].HeaderText = "First Name";
+                DataGridView_Sales.Columns[3].HeaderText = "Phone";
+                DataGridView_Sales.Columns[4].HeaderText = "PNR";
+                DataGridView_Sales.Columns[5].HeaderText = "Issue Date";
+                DataGridView_Sales.Columns[6].HeaderText = "Agent";
+                DataGridView_Sales.Columns[7].HeaderText = "Issue Price";
+                DataGridView_Sales.Columns[8].HeaderText = "Sale Price";
+                DataGridView_Sales.Columns[9].HeaderText = "Status";
+                DataGridView_Sales.Columns[10].HeaderText = "Amount Paid";
+                DataGridView_Sales.Columns[11].HeaderText = "Installment #1";
+                DataGridView_Sales.Columns[12].HeaderText = "Ins. #1 Date";
+                DataGridView_Sales.Columns[13].HeaderText = "Installment #2";
+                DataGridView_Sales.Columns[14].HeaderText = "Ins. #2 Date";
+                DataGridView_Sales.Columns[15].HeaderText = "Due Amount";
+                DataGridView_Sales.Columns[16].HeaderText = "PCR issue Price";
+                DataGridView_Sales.Columns[17].HeaderText = "PCR Sale Price";
+                DataGridView_Sales.Columns[18].HeaderText = "PCR Issue Date";
             }
         }
 

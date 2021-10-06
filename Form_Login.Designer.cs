@@ -31,6 +31,7 @@ namespace Synth
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Login));
             this.Panel_login = new System.Windows.Forms.Panel();
+            this.LinkLabel_RequestLicense = new System.Windows.Forms.LinkLabel();
             this.Textbox_Username = new System.Windows.Forms.TextBox();
             this.Textbox_Password = new System.Windows.Forms.TextBox();
             this.Button_Login = new System.Windows.Forms.Button();
@@ -48,6 +49,7 @@ namespace Synth
             // Panel_login
             // 
             this.Panel_login.BackColor = System.Drawing.Color.Transparent;
+            this.Panel_login.Controls.Add(this.LinkLabel_RequestLicense);
             this.Panel_login.Controls.Add(this.Textbox_Username);
             this.Panel_login.Controls.Add(this.Textbox_Password);
             this.Panel_login.Controls.Add(this.Button_Login);
@@ -63,6 +65,21 @@ namespace Synth
             this.Panel_login.Name = "Panel_login";
             this.Panel_login.Size = new System.Drawing.Size(800, 500);
             this.Panel_login.TabIndex = 0;
+            // 
+            // LinkLabel_RequestLicense
+            // 
+            this.LinkLabel_RequestLicense.AutoSize = true;
+            this.LinkLabel_RequestLicense.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LinkLabel_RequestLicense.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LinkLabel_RequestLicense.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.LinkLabel_RequestLicense.Location = new System.Drawing.Point(501, 305);
+            this.LinkLabel_RequestLicense.Name = "LinkLabel_RequestLicense";
+            this.LinkLabel_RequestLicense.Size = new System.Drawing.Size(243, 17);
+            this.LinkLabel_RequestLicense.TabIndex = 11;
+            this.LinkLabel_RequestLicense.TabStop = true;
+            this.LinkLabel_RequestLicense.Text = "Product activation failed, request License.";
+            this.LinkLabel_RequestLicense.Visible = false;
+            this.LinkLabel_RequestLicense.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_RequestLicense_LinkClicked);
             // 
             // Textbox_Username
             // 
@@ -117,10 +134,8 @@ namespace Synth
             this.Label_Incorrect.ForeColor = System.Drawing.Color.Maroon;
             this.Label_Incorrect.Location = new System.Drawing.Point(510, 305);
             this.Label_Incorrect.Name = "Label_Incorrect";
-            this.Label_Incorrect.Size = new System.Drawing.Size(194, 17);
+            this.Label_Incorrect.Size = new System.Drawing.Size(0, 17);
             this.Label_Incorrect.TabIndex = 8;
-            this.Label_Incorrect.Text = "Incorrect username or password.";
-            this.Label_Incorrect.Visible = false;
             // 
             // pictureBox1
             // 
@@ -216,6 +231,7 @@ namespace Synth
         private System.Windows.Forms.Label Label_Version;
         private System.Windows.Forms.Label Label_Incorrect;
         private System.Windows.Forms.Button Button_Close;
+        private System.Windows.Forms.LinkLabel LinkLabel_RequestLicense;
     }
 }
 
