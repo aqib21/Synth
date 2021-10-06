@@ -154,17 +154,20 @@ namespace Synth
                         }
                     }
                 }
-                string folderPath = ConfigurationManager.AppSettings["Path"];
-                if (!Directory.Exists(folderPath))
+
+                using XLWorkbook workbook = new();
+                workbook.Worksheets.Add(dt, "Sales");
+                workbook.Worksheet(1).Columns().AdjustToContents();
+
+                SaveFileDialog.FileName = $"Sales Report - {DateTime.Now.ToShortDateString()}";
+                SaveFileDialog.InitialDirectory = ConfigurationManager.AppSettings["Path"];
+
+                DialogResult result = SaveFileDialog.ShowDialog();
+                if (result == DialogResult.OK)
                 {
-                    Directory.CreateDirectory(folderPath);
+                    workbook.SaveAs(SaveFileDialog.FileName);
+                    MessageBox.Show($"File saved as {SaveFileDialog.FileName}", "Export Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                using XLWorkbook wb = new();
-                wb.Worksheets.Add(dt, "Sales");
-                wb.Worksheet(1).Columns().AdjustToContents();
-                string filePath = folderPath + "SalesReport - " + DateTime.Now.ToShortDateString() + ".xlsx";
-                wb.SaveAs(filePath);
-                MessageBox.Show($"File saved as {filePath}", "Export Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

@@ -40,6 +40,7 @@ namespace Synth
             this.DataGridView_Sales = new System.Windows.Forms.DataGridView();
             this.Button_Export = new System.Windows.Forms.Button();
             this.Button_Print = new System.Windows.Forms.Button();
+            this.SaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_Sales)).BeginInit();
             this.SuspendLayout();
@@ -187,6 +188,10 @@ namespace Synth
             this.Button_Print.UseVisualStyleBackColor = false;
             this.Button_Print.Click += new System.EventHandler(this.Button_Print_Click);
             // 
+            // SaveFileDialog
+            // 
+            this.SaveFileDialog.Filter = "Excel files|*.xlsx";
+            // 
             // Form_SalesManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -229,5 +234,6 @@ namespace Synth
         private System.Windows.Forms.DataGridView DataGridView_Sales;
         private System.Windows.Forms.Button Button_Export;
         private System.Windows.Forms.Button Button_Print;
+        private System.Windows.Forms.SaveFileDialog SaveFileDialog;
     }
 }
