@@ -31,7 +31,9 @@ namespace Synth
             }
             func(Controls);
 
-            if(sales_id_edit != 0)
+            RefreshIssueIDCombo();
+
+            if (sales_id_edit != 0)
             {
                 try
                 {
@@ -48,7 +50,7 @@ namespace Synth
                         Combobox_IssueID.SelectedItem = reader[5].ToString();
                         Numeric_IssuePrice.Value = decimal.Parse(reader[6].ToString());
                         Numeric_SalesPrice.Value = decimal.Parse(reader[7].ToString());
-                        Combobox_Status.SelectedItem = reader[8].ToString();
+                        Combobox_Status.SelectedIndex = Combobox_Status.FindStringExact(reader[8].ToString());
                         Numeric_AmountPaid.Value = decimal.Parse(reader[9].ToString());
                         Numeric_Installment1.Value = decimal.Parse(reader[10].ToString());
                         DateTimePicker_Payment1.Value = DateTime.Parse(reader[11].ToString());
@@ -69,8 +71,6 @@ namespace Synth
                     DB.Dispose();
                 }
             }
-
-            RefreshIssueIDCombo();
         }
         private void RadioButton_CheckedChanged(object sender, EventArgs e)
         {
