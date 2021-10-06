@@ -162,6 +162,7 @@ namespace Synth
             // 
             this.Button_Export.BackColor = System.Drawing.Color.Crimson;
             this.Button_Export.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button_Export.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Button_Export.FlatAppearance.BorderSize = 0;
             this.Button_Export.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button_Export.ForeColor = System.Drawing.Color.White;
@@ -177,6 +178,7 @@ namespace Synth
             // 
             this.Button_Print.BackColor = System.Drawing.Color.Crimson;
             this.Button_Print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button_Print.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Button_Print.FlatAppearance.BorderSize = 0;
             this.Button_Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button_Print.ForeColor = System.Drawing.Color.White;

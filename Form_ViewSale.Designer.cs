@@ -357,6 +357,7 @@ namespace Synth
             this.PrintPreviewDialog.AutoScrollMargin = new System.Drawing.Size(0, 0);
             this.PrintPreviewDialog.AutoScrollMinSize = new System.Drawing.Size(0, 0);
             this.PrintPreviewDialog.ClientSize = new System.Drawing.Size(400, 300);
+            this.PrintPreviewDialog.Document = this.PrintDocument;
             this.PrintPreviewDialog.Enabled = true;
             this.PrintPreviewDialog.Icon = ((System.Drawing.Icon)(resources.GetObject("PrintPreviewDialog.Icon")));
             this.PrintPreviewDialog.Name = "PrintPreviewDialog";
@@ -596,6 +597,7 @@ namespace Synth
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(840, 1000);
+            this.ControlBox = false;
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -642,9 +644,11 @@ namespace Synth
             this.Controls.Add(this.Label_Title);
             this.Controls.Add(this.Button_Close);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_ViewSale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Text";
+            this.Text = "Print Receipt";
             this.Load += new System.EventHandler(this.Form_ViewSale_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
