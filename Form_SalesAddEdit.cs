@@ -2,6 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 using Npgsql;
+using System.Linq;
 
 namespace Synth
 {
@@ -127,6 +128,7 @@ namespace Synth
             if (Combobox_IssueID.SelectedItem is DataRowView dataRowView) Issue_ID = dataRowView.Row["name"].ToString();
             decimal Issue_Price = Numeric_IssuePrice.Value;
             decimal SalePrice = Numeric_SalesPrice.Value;
+            decimal profit = SalePrice - Issue_Price;
             string Status = Combobox_Status.SelectedItem.ToString();
             decimal AmountPaid = Numeric_AmountPaid.Value;
             decimal Installment1 = Numeric_Installment1.Value;
@@ -136,10 +138,17 @@ namespace Synth
             decimal DueAmount = Numeric_DueAmount.Value;
             decimal PCRIssuePrice = Numeric_PCRIssuePrice.Value;
             decimal PCRSalePrice = Numeric_PCRSalePrice.Value;
+            decimal PCRProfit = PCRSalePrice - PCRIssuePrice;
 
             if (LastName == "" || FirstName == "" || Phone == "" || PNR == "" || Issue_ID == "")
             {
                 Label_Incorrect.Text = "Fields cannot be empty.";
+                return;
+            }
+
+            if (!PNR.All(char.IsLetterOrDigit))
+            {
+                Label_Incorrect.Text = "PNR should contain only letters and numbers.";
                 return;
             }
 
@@ -163,6 +172,7 @@ namespace Synth
                         $"'{Issue_ID}', " +
                         $"{Issue_Price}, " +
                         $"{SalePrice}, " +
+                        $"{profit}, "+
                         $"'{Status}', " +
                         $"{AmountPaid}, " +
                         $"{Installment1}, " +
@@ -172,6 +182,7 @@ namespace Synth
                         $"{DueAmount}, " +
                         $"{PCRIssuePrice}, " +
                         $"{PCRSalePrice}, " +
+                        $"{PCRProfit}, " +
                         $"null," +
                         $"{User.User_ID})", conn);
                     cmd.ExecuteNonQuery();
@@ -187,6 +198,7 @@ namespace Synth
                         $"'{Issue_ID}', " +
                         $"{Issue_Price}, " +
                         $"{SalePrice}, " +
+                        $"{profit}, " +
                         $"'{Status}', " +
                         $"{AmountPaid}, " +
                         $"{Installment1}, " +
@@ -196,11 +208,16 @@ namespace Synth
                         $"{DueAmount}, " +
                         $"{PCRIssuePrice}, " +
                         $"{PCRSalePrice}, " +
+                        $"{PCRProfit}, " +
                         $"null," +
-                        $"{User.User_ID}), " +
-                        $"{sales_id_edit}", conn);
+                        $"{User.User_ID}, " +
+                        $"{sales_id_edit})", conn);
                     cmd.ExecuteNonQuery();
                 }
+
+                if (form_SalesManagement != null) form_SalesManagement.RefreshDataGridView("");
+                if (form_Main != null) form_Main.RefreshPNRCombo();
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -209,9 +226,6 @@ namespace Synth
             finally
             {
                 DB.Dispose();
-                if(form_SalesManagement != null) form_SalesManagement.RefreshDataGridView("");
-                if(form_Main != null) form_Main.RefreshPNRCombo();
-                this.Close();
             }
 
         }

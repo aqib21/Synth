@@ -149,9 +149,11 @@ namespace Synth
             // 
             this.Textbox_Phone.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Textbox_Phone.Location = new System.Drawing.Point(115, 67);
+            this.Textbox_Phone.MaxLength = 13;
             this.Textbox_Phone.Name = "Textbox_Phone";
             this.Textbox_Phone.Size = new System.Drawing.Size(322, 24);
             this.Textbox_Phone.TabIndex = 3;
+            this.Textbox_Phone.Text = "+966";
             // 
             // Label_Insert
             // 
@@ -173,6 +175,7 @@ namespace Synth
             this.Textbox_LastName.BackColor = System.Drawing.Color.White;
             this.Textbox_LastName.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Textbox_LastName.Location = new System.Drawing.Point(115, 27);
+            this.Textbox_LastName.MaxLength = 200;
             this.Textbox_LastName.Name = "Textbox_LastName";
             this.Textbox_LastName.Size = new System.Drawing.Size(322, 24);
             this.Textbox_LastName.TabIndex = 1;
@@ -206,6 +209,7 @@ namespace Synth
             // 
             this.Textbox_FirstName.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Textbox_FirstName.Location = new System.Drawing.Point(654, 27);
+            this.Textbox_FirstName.MaxLength = 200;
             this.Textbox_FirstName.Name = "Textbox_FirstName";
             this.Textbox_FirstName.Size = new System.Drawing.Size(322, 24);
             this.Textbox_FirstName.TabIndex = 2;
@@ -267,6 +271,7 @@ namespace Synth
             // 
             this.Textbox_PNR.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Textbox_PNR.Location = new System.Drawing.Point(654, 62);
+            this.Textbox_PNR.MaxLength = 6;
             this.Textbox_PNR.Name = "Textbox_PNR";
             this.Textbox_PNR.Size = new System.Drawing.Size(322, 24);
             this.Textbox_PNR.TabIndex = 4;
@@ -415,7 +420,6 @@ namespace Synth
             // Numeric_PCRSalePrice
             // 
             this.Numeric_PCRSalePrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Numeric_PCRSalePrice.DecimalPlaces = 2;
             this.Numeric_PCRSalePrice.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Numeric_PCRSalePrice.InterceptArrowKeys = false;
             this.Numeric_PCRSalePrice.Location = new System.Drawing.Point(655, 29);
@@ -432,7 +436,6 @@ namespace Synth
             // Numeric_PCRIssuePrice
             // 
             this.Numeric_PCRIssuePrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Numeric_PCRIssuePrice.DecimalPlaces = 2;
             this.Numeric_PCRIssuePrice.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Numeric_PCRIssuePrice.InterceptArrowKeys = false;
             this.Numeric_PCRIssuePrice.Location = new System.Drawing.Point(116, 29);
@@ -545,7 +548,6 @@ namespace Synth
             // Numeric_SalesPrice
             // 
             this.Numeric_SalesPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Numeric_SalesPrice.DecimalPlaces = 2;
             this.Numeric_SalesPrice.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Numeric_SalesPrice.InterceptArrowKeys = false;
             this.Numeric_SalesPrice.Location = new System.Drawing.Point(654, 145);
@@ -563,7 +565,6 @@ namespace Synth
             // Numeric_IssuePrice
             // 
             this.Numeric_IssuePrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Numeric_IssuePrice.DecimalPlaces = 2;
             this.Numeric_IssuePrice.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Numeric_IssuePrice.InterceptArrowKeys = false;
             this.Numeric_IssuePrice.Location = new System.Drawing.Point(115, 145);
@@ -603,7 +604,6 @@ namespace Synth
             // Numeric_Installment2
             // 
             this.Numeric_Installment2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Numeric_Installment2.DecimalPlaces = 2;
             this.Numeric_Installment2.Enabled = false;
             this.Numeric_Installment2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Numeric_Installment2.InterceptArrowKeys = false;
@@ -622,7 +622,6 @@ namespace Synth
             // Numeric_Installment1
             // 
             this.Numeric_Installment1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Numeric_Installment1.DecimalPlaces = 2;
             this.Numeric_Installment1.Enabled = false;
             this.Numeric_Installment1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Numeric_Installment1.InterceptArrowKeys = false;

@@ -38,9 +38,15 @@ namespace Synth
             this.Button_Edit = new System.Windows.Forms.Button();
             this.Button_Delete = new System.Windows.Forms.Button();
             this.DataGridView_Sales = new System.Windows.Forms.DataGridView();
-            this.Button_Export = new System.Windows.Forms.Button();
-            this.Button_Print = new System.Windows.Forms.Button();
             this.SaveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.Button_Refresh = new System.Windows.Forms.Button();
+            this.Label_Refresh = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Button_Insert = new System.Windows.Forms.Button();
+            this.Label_Print = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Button_Export = new System.Windows.Forms.Button();
+            this.Label_Export = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_Sales)).BeginInit();
             this.SuspendLayout();
@@ -158,41 +164,121 @@ namespace Synth
             this.DataGridView_Sales.Size = new System.Drawing.Size(1210, 319);
             this.DataGridView_Sales.TabIndex = 12;
             // 
+            // SaveFileDialog
+            // 
+            this.SaveFileDialog.Filter = "Excel files|*.xlsx";
+            // 
+            // Button_Refresh
+            // 
+            this.Button_Refresh.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Refresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_Refresh.BackgroundImage")));
+            this.Button_Refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button_Refresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Refresh.FlatAppearance.BorderSize = 0;
+            this.Button_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Refresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Refresh.Location = new System.Drawing.Point(492, 68);
+            this.Button_Refresh.Name = "Button_Refresh";
+            this.Button_Refresh.Size = new System.Drawing.Size(25, 25);
+            this.Button_Refresh.TabIndex = 23;
+            this.Button_Refresh.UseVisualStyleBackColor = false;
+            this.Button_Refresh.Click += new System.EventHandler(this.Button_Refresh_Click);
+            // 
+            // Label_Refresh
+            // 
+            this.Label_Refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Label_Refresh.AutoSize = true;
+            this.Label_Refresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label_Refresh.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Label_Refresh.Location = new System.Drawing.Point(523, 72);
+            this.Label_Refresh.Name = "Label_Refresh";
+            this.Label_Refresh.Size = new System.Drawing.Size(82, 17);
+            this.Label_Refresh.TabIndex = 22;
+            this.Label_Refresh.Text = "Refresh Data";
+            this.Label_Refresh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Label_Refresh.Click += new System.EventHandler(this.Button_Refresh_Click);
+            // 
+            // label3
+            // 
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label3.Location = new System.Drawing.Point(611, 68);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(2, 25);
+            this.label3.TabIndex = 29;
+            // 
+            // Button_Insert
+            // 
+            this.Button_Insert.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Insert.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_Insert.BackgroundImage")));
+            this.Button_Insert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button_Insert.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Insert.FlatAppearance.BorderSize = 0;
+            this.Button_Insert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Insert.Location = new System.Drawing.Point(709, 68);
+            this.Button_Insert.Name = "Button_Insert";
+            this.Button_Insert.Size = new System.Drawing.Size(25, 25);
+            this.Button_Insert.TabIndex = 28;
+            this.Button_Insert.UseVisualStyleBackColor = false;
+            this.Button_Insert.Click += new System.EventHandler(this.Button_Print_Click);
+            // 
+            // Label_Print
+            // 
+            this.Label_Print.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Label_Print.AutoSize = true;
+            this.Label_Print.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label_Print.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Label_Print.Location = new System.Drawing.Point(740, 72);
+            this.Label_Print.Name = "Label_Print";
+            this.Label_Print.Size = new System.Drawing.Size(35, 17);
+            this.Label_Print.TabIndex = 27;
+            this.Label_Print.Text = "Print";
+            this.Label_Print.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Label_Print.Click += new System.EventHandler(this.Button_Print_Click);
+            // 
+            // label4
+            // 
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label4.Location = new System.Drawing.Point(701, 68);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(2, 25);
+            this.label4.TabIndex = 26;
+            // 
             // Button_Export
             // 
-            this.Button_Export.BackColor = System.Drawing.Color.Crimson;
+            this.Button_Export.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Export.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_Export.BackgroundImage")));
             this.Button_Export.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button_Export.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Button_Export.FlatAppearance.BorderSize = 0;
             this.Button_Export.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_Export.ForeColor = System.Drawing.Color.White;
-            this.Button_Export.Location = new System.Drawing.Point(494, 68);
+            this.Button_Export.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Export.Location = new System.Drawing.Point(619, 68);
             this.Button_Export.Name = "Button_Export";
-            this.Button_Export.Size = new System.Drawing.Size(75, 25);
-            this.Button_Export.TabIndex = 20;
-            this.Button_Export.Text = "Export";
+            this.Button_Export.Size = new System.Drawing.Size(25, 25);
+            this.Button_Export.TabIndex = 25;
             this.Button_Export.UseVisualStyleBackColor = false;
             this.Button_Export.Click += new System.EventHandler(this.Button_Export_Click);
             // 
-            // Button_Print
+            // Label_Export
             // 
-            this.Button_Print.BackColor = System.Drawing.Color.Crimson;
-            this.Button_Print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Button_Print.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_Print.FlatAppearance.BorderSize = 0;
-            this.Button_Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_Print.ForeColor = System.Drawing.Color.White;
-            this.Button_Print.Location = new System.Drawing.Point(575, 68);
-            this.Button_Print.Name = "Button_Print";
-            this.Button_Print.Size = new System.Drawing.Size(75, 25);
-            this.Button_Print.TabIndex = 21;
-            this.Button_Print.Text = "Print";
-            this.Button_Print.UseVisualStyleBackColor = false;
-            this.Button_Print.Click += new System.EventHandler(this.Button_Print_Click);
-            // 
-            // SaveFileDialog
-            // 
-            this.SaveFileDialog.Filter = "Excel files|*.xlsx";
+            this.Label_Export.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Label_Export.AutoSize = true;
+            this.Label_Export.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label_Export.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Label_Export.Location = new System.Drawing.Point(650, 72);
+            this.Label_Export.Name = "Label_Export";
+            this.Label_Export.Size = new System.Drawing.Size(45, 17);
+            this.Label_Export.TabIndex = 24;
+            this.Label_Export.Text = "Export";
+            this.Label_Export.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Label_Export.Click += new System.EventHandler(this.Button_Export_Click);
             // 
             // Form_SalesManagement
             // 
@@ -200,8 +286,14 @@ namespace Synth
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1234, 461);
-            this.Controls.Add(this.Button_Print);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Button_Insert);
+            this.Controls.Add(this.Label_Print);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.Button_Export);
+            this.Controls.Add(this.Label_Export);
+            this.Controls.Add(this.Button_Refresh);
+            this.Controls.Add(this.Label_Refresh);
             this.Controls.Add(this.Label_Incorrect);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
@@ -234,8 +326,14 @@ namespace Synth
         private System.Windows.Forms.Button Button_Edit;
         private System.Windows.Forms.Button Button_Delete;
         private System.Windows.Forms.DataGridView DataGridView_Sales;
-        private System.Windows.Forms.Button Button_Export;
-        private System.Windows.Forms.Button Button_Print;
         private System.Windows.Forms.SaveFileDialog SaveFileDialog;
+        private System.Windows.Forms.Button Button_Refresh;
+        private System.Windows.Forms.Label Label_Refresh;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button Button_Insert;
+        private System.Windows.Forms.Label Label_Print;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button Button_Export;
+        private System.Windows.Forms.Label Label_Export;
     }
 }

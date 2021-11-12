@@ -76,9 +76,11 @@ namespace Synth
             // 
             this.Textbox_Phone.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Textbox_Phone.Location = new System.Drawing.Point(146, 177);
+            this.Textbox_Phone.MaxLength = 15;
             this.Textbox_Phone.Name = "Textbox_Phone";
             this.Textbox_Phone.Size = new System.Drawing.Size(322, 24);
             this.Textbox_Phone.TabIndex = 2;
+            this.Textbox_Phone.Text = "+966";
             // 
             // Label_Insert
             // 

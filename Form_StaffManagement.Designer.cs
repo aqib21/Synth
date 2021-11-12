@@ -39,6 +39,8 @@ namespace Synth
             this.label2 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.Label_Incorrect = new System.Windows.Forms.Label();
+            this.Button_Refresh = new System.Windows.Forms.Button();
+            this.Label_Refresh = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_Staff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -161,12 +163,46 @@ namespace Synth
             this.Label_Incorrect.Size = new System.Drawing.Size(0, 17);
             this.Label_Incorrect.TabIndex = 11;
             // 
+            // Button_Refresh
+            // 
+            this.Button_Refresh.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Refresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_Refresh.BackgroundImage")));
+            this.Button_Refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button_Refresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Refresh.FlatAppearance.BorderSize = 0;
+            this.Button_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Refresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Refresh.Location = new System.Drawing.Point(490, 63);
+            this.Button_Refresh.Name = "Button_Refresh";
+            this.Button_Refresh.Size = new System.Drawing.Size(25, 25);
+            this.Button_Refresh.TabIndex = 25;
+            this.Button_Refresh.UseVisualStyleBackColor = false;
+            this.Button_Refresh.Click += new System.EventHandler(this.Button_Refresh_Click);
+            // 
+            // Label_Refresh
+            // 
+            this.Label_Refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Label_Refresh.AutoSize = true;
+            this.Label_Refresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label_Refresh.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Label_Refresh.Location = new System.Drawing.Point(521, 67);
+            this.Label_Refresh.Name = "Label_Refresh";
+            this.Label_Refresh.Size = new System.Drawing.Size(82, 17);
+            this.Label_Refresh.TabIndex = 24;
+            this.Label_Refresh.Text = "Refresh Data";
+            this.Label_Refresh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Label_Refresh.Click += new System.EventHandler(this.Button_Refresh_Click);
+            // 
             // Form_StaffManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.Button_Refresh);
+            this.Controls.Add(this.Label_Refresh);
             this.Controls.Add(this.Label_Incorrect);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label2);
@@ -201,5 +237,7 @@ namespace Synth
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label Label_Incorrect;
+        private System.Windows.Forms.Button Button_Refresh;
+        private System.Windows.Forms.Label Label_Refresh;
     }
 }

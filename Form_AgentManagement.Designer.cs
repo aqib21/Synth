@@ -35,9 +35,9 @@ namespace Synth
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Textbox_Search = new System.Windows.Forms.TextBox();
             this.Button_Add = new System.Windows.Forms.Button();
-            this.Button_Edit = new System.Windows.Forms.Button();
-            this.Button_Delete = new System.Windows.Forms.Button();
             this.DataGridView_Agent = new System.Windows.Forms.DataGridView();
+            this.Label_Refresh = new System.Windows.Forms.Label();
+            this.Button_Refresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_Agent)).BeginInit();
             this.SuspendLayout();
@@ -102,38 +102,6 @@ namespace Synth
             this.Button_Add.UseVisualStyleBackColor = false;
             this.Button_Add.Click += new System.EventHandler(this.Button_Add_Click);
             // 
-            // Button_Edit
-            // 
-            this.Button_Edit.BackColor = System.Drawing.Color.DodgerBlue;
-            this.Button_Edit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_Edit.FlatAppearance.BorderSize = 0;
-            this.Button_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_Edit.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Button_Edit.ForeColor = System.Drawing.Color.White;
-            this.Button_Edit.Location = new System.Drawing.Point(234, 68);
-            this.Button_Edit.Name = "Button_Edit";
-            this.Button_Edit.Size = new System.Drawing.Size(75, 25);
-            this.Button_Edit.TabIndex = 22;
-            this.Button_Edit.Text = "Edit";
-            this.Button_Edit.UseVisualStyleBackColor = false;
-            this.Button_Edit.Click += new System.EventHandler(this.Button_Edit_Click);
-            // 
-            // Button_Delete
-            // 
-            this.Button_Delete.BackColor = System.Drawing.Color.DarkRed;
-            this.Button_Delete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_Delete.FlatAppearance.BorderSize = 0;
-            this.Button_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_Delete.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Button_Delete.ForeColor = System.Drawing.Color.White;
-            this.Button_Delete.Location = new System.Drawing.Point(315, 68);
-            this.Button_Delete.Name = "Button_Delete";
-            this.Button_Delete.Size = new System.Drawing.Size(75, 25);
-            this.Button_Delete.TabIndex = 21;
-            this.Button_Delete.Text = "Delete";
-            this.Button_Delete.UseVisualStyleBackColor = false;
-            this.Button_Delete.Click += new System.EventHandler(this.Button_Delete_Click);
-            // 
             // DataGridView_Agent
             // 
             this.DataGridView_Agent.AllowUserToAddRows = false;
@@ -152,19 +120,51 @@ namespace Synth
             this.DataGridView_Agent.Size = new System.Drawing.Size(481, 319);
             this.DataGridView_Agent.TabIndex = 20;
             // 
+            // Label_Refresh
+            // 
+            this.Label_Refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Label_Refresh.AutoSize = true;
+            this.Label_Refresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label_Refresh.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Label_Refresh.Location = new System.Drawing.Point(411, 72);
+            this.Label_Refresh.Name = "Label_Refresh";
+            this.Label_Refresh.Size = new System.Drawing.Size(82, 17);
+            this.Label_Refresh.TabIndex = 28;
+            this.Label_Refresh.Text = "Refresh Data";
+            this.Label_Refresh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Label_Refresh.Click += new System.EventHandler(this.Button_Refresh_Click);
+            // 
+            // Button_Refresh
+            // 
+            this.Button_Refresh.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Refresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_Refresh.BackgroundImage")));
+            this.Button_Refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button_Refresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Refresh.FlatAppearance.BorderSize = 0;
+            this.Button_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Refresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Refresh.Location = new System.Drawing.Point(380, 68);
+            this.Button_Refresh.Name = "Button_Refresh";
+            this.Button_Refresh.Size = new System.Drawing.Size(25, 25);
+            this.Button_Refresh.TabIndex = 29;
+            this.Button_Refresh.UseVisualStyleBackColor = false;
+            this.Button_Refresh.Click += new System.EventHandler(this.Button_Refresh_Click);
+            // 
             // Form_AgentManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(504, 461);
+            this.Controls.Add(this.Button_Refresh);
+            this.Controls.Add(this.Label_Refresh);
             this.Controls.Add(this.Label_Incorrect);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Textbox_Search);
             this.Controls.Add(this.Button_Add);
-            this.Controls.Add(this.Button_Edit);
-            this.Controls.Add(this.Button_Delete);
             this.Controls.Add(this.DataGridView_Agent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -188,8 +188,8 @@ namespace Synth
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox Textbox_Search;
         private System.Windows.Forms.Button Button_Add;
-        private System.Windows.Forms.Button Button_Edit;
-        private System.Windows.Forms.Button Button_Delete;
         private System.Windows.Forms.DataGridView DataGridView_Agent;
+        private System.Windows.Forms.Label Label_Refresh;
+        private System.Windows.Forms.Button Button_Refresh;
     }
 }

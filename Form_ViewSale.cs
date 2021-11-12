@@ -2,6 +2,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace Synth
 {
@@ -24,6 +25,13 @@ namespace Synth
         {
             try
             {
+                PictureBox_Logo.Image = Properties.Resources.Logo;
+                PictureBox_Logo.SizeMode = PictureBoxSizeMode.StretchImage;
+                Label_CompanyName.Text = ConfigurationManager.AppSettings["CompanyName"];
+                Label_CompanyPhone.Text = ConfigurationManager.AppSettings["CompanyPhone"];
+                Label_CompanyAddress.Text = ConfigurationManager.AppSettings["CompanyAddress"];
+                Label_CompanyEmail.Text = ConfigurationManager.AppSettings["CompanyEmail"];
+
                 using var conn = DB.GetConnection();
                 using var cmd = new NpgsqlCommand($"SELECT * FROM FN_GetSale({sale_id})", conn);
                 using var reader = cmd.ExecuteReader();

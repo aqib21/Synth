@@ -179,5 +179,10 @@ namespace Synth
                 Application.OpenForms["Form_AgentManagement"].BringToFront();
             }
         }
+
+        private void Button_Refresh_Click(object sender, EventArgs e)
+        {
+            RefreshPNRCombo();
+        }
     }
 }

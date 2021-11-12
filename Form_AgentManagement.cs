@@ -126,5 +126,10 @@ namespace Synth
             if (Application.OpenForms.OfType<Form_AgentAddEdit>().Any())
                 Application.OpenForms["Form_AgentAddEdit"].Close();
         }
+
+        private void Button_Refresh_Click(object sender, EventArgs e)
+        {
+            RefreshDataGridView("");
+        }
     }
 }

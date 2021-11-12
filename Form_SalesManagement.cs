@@ -49,16 +49,17 @@ namespace Synth
                 DataGridView_Sales.Columns[6].HeaderText = "Agent";
                 DataGridView_Sales.Columns[7].HeaderText = "Issue Price";
                 DataGridView_Sales.Columns[8].HeaderText = "Sale Price";
-                DataGridView_Sales.Columns[9].HeaderText = "Status";
-                DataGridView_Sales.Columns[10].HeaderText = "Amount Paid";
-                DataGridView_Sales.Columns[11].HeaderText = "Installment #1";
-                DataGridView_Sales.Columns[12].HeaderText = "Ins. #1 Date";
-                DataGridView_Sales.Columns[13].HeaderText = "Installment #2";
-                DataGridView_Sales.Columns[14].HeaderText = "Ins. #2 Date";
-                DataGridView_Sales.Columns[15].HeaderText = "Due Amount";
-                DataGridView_Sales.Columns[16].HeaderText = "PCR issue Price";
-                DataGridView_Sales.Columns[17].HeaderText = "PCR Sale Price";
-                DataGridView_Sales.Columns[18].HeaderText = "PCR Issue Date";
+                DataGridView_Sales.Columns[9].HeaderText = "Profit";
+                DataGridView_Sales.Columns[10].HeaderText = "Status";
+                DataGridView_Sales.Columns[11].HeaderText = "Amount Paid";
+                DataGridView_Sales.Columns[12].HeaderText = "Installment #1";
+                DataGridView_Sales.Columns[13].HeaderText = "Ins. #1 Date";
+                DataGridView_Sales.Columns[14].HeaderText = "Installment #2";
+                DataGridView_Sales.Columns[15].HeaderText = "Ins. #2 Date";
+                DataGridView_Sales.Columns[16].HeaderText = "Due Amount";
+                DataGridView_Sales.Columns[17].HeaderText = "PCR issue Price";
+                DataGridView_Sales.Columns[18].HeaderText = "PCR Sale Price";
+                DataGridView_Sales.Columns[19].HeaderText = "PCR Profit";
             }
         }
 
@@ -212,6 +213,11 @@ namespace Synth
             {
                 Application.OpenForms["Form_ViewSale"].BringToFront();
             }
+        }
+
+        private void Button_Refresh_Click(object sender, EventArgs e)
+        {
+            RefreshDataGridView("");
         }
     }
 }

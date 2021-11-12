@@ -53,6 +53,9 @@ namespace Synth
             this.Label_Insert = new System.Windows.Forms.Label();
             this.Combobox_PNRSearch = new System.Windows.Forms.ComboBox();
             this.Label_Incorrect = new System.Windows.Forms.Label();
+            this.Button_Refresh = new System.Windows.Forms.Button();
+            this.Label_Refresh = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.Panel_Admin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -277,7 +280,7 @@ namespace Synth
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(123, 105);
+            this.label2.Location = new System.Drawing.Point(69, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 17);
             this.label2.TabIndex = 8;
@@ -293,7 +296,7 @@ namespace Synth
             this.Button_Retrieve.FlatAppearance.BorderSize = 0;
             this.Button_Retrieve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button_Retrieve.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Retrieve.Location = new System.Drawing.Point(418, 125);
+            this.Button_Retrieve.Location = new System.Drawing.Point(364, 125);
             this.Button_Retrieve.Name = "Button_Retrieve";
             this.Button_Retrieve.Size = new System.Drawing.Size(25, 25);
             this.Button_Retrieve.TabIndex = 10;
@@ -308,7 +311,7 @@ namespace Synth
             this.Label_Retrieve.AutoSize = true;
             this.Label_Retrieve.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Label_Retrieve.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Label_Retrieve.Location = new System.Drawing.Point(449, 129);
+            this.Label_Retrieve.Location = new System.Drawing.Point(395, 129);
             this.Label_Retrieve.Name = "Label_Retrieve";
             this.Label_Retrieve.Size = new System.Drawing.Size(87, 17);
             this.Label_Retrieve.TabIndex = 9;
@@ -319,7 +322,7 @@ namespace Synth
             // label4
             // 
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Location = new System.Drawing.Point(542, 125);
+            this.label4.Location = new System.Drawing.Point(488, 125);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(2, 25);
             this.label4.TabIndex = 11;
@@ -341,7 +344,7 @@ namespace Synth
             this.Button_Insert.FlatAppearance.BorderSize = 0;
             this.Button_Insert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button_Insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Insert.Location = new System.Drawing.Point(550, 125);
+            this.Button_Insert.Location = new System.Drawing.Point(496, 125);
             this.Button_Insert.Name = "Button_Insert";
             this.Button_Insert.Size = new System.Drawing.Size(25, 25);
             this.Button_Insert.TabIndex = 14;
@@ -356,7 +359,7 @@ namespace Synth
             this.Label_Insert.AutoSize = true;
             this.Label_Insert.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Label_Insert.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Label_Insert.Location = new System.Drawing.Point(581, 129);
+            this.Label_Insert.Location = new System.Drawing.Point(527, 129);
             this.Label_Insert.Name = "Label_Insert";
             this.Label_Insert.Size = new System.Drawing.Size(72, 17);
             this.Label_Insert.TabIndex = 13;
@@ -368,7 +371,7 @@ namespace Synth
             // 
             this.Combobox_PNRSearch.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Combobox_PNRSearch.FormattingEnabled = true;
-            this.Combobox_PNRSearch.Location = new System.Drawing.Point(123, 127);
+            this.Combobox_PNRSearch.Location = new System.Drawing.Point(69, 127);
             this.Combobox_PNRSearch.Name = "Combobox_PNRSearch";
             this.Combobox_PNRSearch.Size = new System.Drawing.Size(280, 23);
             this.Combobox_PNRSearch.TabIndex = 15;
@@ -378,10 +381,50 @@ namespace Synth
             this.Label_Incorrect.AutoSize = true;
             this.Label_Incorrect.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Label_Incorrect.ForeColor = System.Drawing.Color.Maroon;
-            this.Label_Incorrect.Location = new System.Drawing.Point(123, 153);
+            this.Label_Incorrect.Location = new System.Drawing.Point(69, 153);
             this.Label_Incorrect.Name = "Label_Incorrect";
             this.Label_Incorrect.Size = new System.Drawing.Size(0, 17);
             this.Label_Incorrect.TabIndex = 16;
+            // 
+            // Button_Refresh
+            // 
+            this.Button_Refresh.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Refresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_Refresh.BackgroundImage")));
+            this.Button_Refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button_Refresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Refresh.FlatAppearance.BorderSize = 0;
+            this.Button_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Refresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Refresh.Location = new System.Drawing.Point(613, 125);
+            this.Button_Refresh.Name = "Button_Refresh";
+            this.Button_Refresh.Size = new System.Drawing.Size(25, 25);
+            this.Button_Refresh.TabIndex = 19;
+            this.Button_Refresh.UseVisualStyleBackColor = false;
+            this.Button_Refresh.Click += new System.EventHandler(this.Button_Refresh_Click);
+            // 
+            // Label_Refresh
+            // 
+            this.Label_Refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Label_Refresh.AutoSize = true;
+            this.Label_Refresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label_Refresh.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Label_Refresh.Location = new System.Drawing.Point(644, 129);
+            this.Label_Refresh.Name = "Label_Refresh";
+            this.Label_Refresh.Size = new System.Drawing.Size(78, 17);
+            this.Label_Refresh.TabIndex = 18;
+            this.Label_Refresh.Text = "Refresh PNR";
+            this.Label_Refresh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Label_Refresh.Click += new System.EventHandler(this.Button_Refresh_Click);
+            // 
+            // label3
+            // 
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label3.Location = new System.Drawing.Point(605, 125);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(2, 25);
+            this.label3.TabIndex = 17;
             // 
             // Form_Main
             // 
@@ -389,6 +432,9 @@ namespace Synth
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.Button_Refresh);
+            this.Controls.Add(this.Label_Refresh);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.Label_Incorrect);
             this.Controls.Add(this.Combobox_PNRSearch);
             this.Controls.Add(this.Button_Insert);
@@ -444,5 +490,8 @@ namespace Synth
         private System.Windows.Forms.Label Label_Agent;
         private System.Windows.Forms.ComboBox Combobox_PNRSearch;
         private System.Windows.Forms.Label Label_Incorrect;
+        private System.Windows.Forms.Button Button_Refresh;
+        private System.Windows.Forms.Label Label_Refresh;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -55,11 +55,11 @@ namespace Synth
             this.Button_Print = new System.Windows.Forms.Button();
             this.PrintDocument = new System.Drawing.Printing.PrintDocument();
             this.PrintPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.PictureBox_Logo = new System.Windows.Forms.PictureBox();
+            this.Label_CompanyName = new System.Windows.Forms.Label();
+            this.Label_CompanyAddress = new System.Windows.Forms.Label();
+            this.Label_CompanyPhone = new System.Windows.Forms.Label();
+            this.Label_CompanyEmail = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -77,7 +77,7 @@ namespace Synth
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -363,59 +363,59 @@ namespace Synth
             this.PrintPreviewDialog.Name = "PrintPreviewDialog";
             this.PrintPreviewDialog.Visible = false;
             // 
-            // pictureBox1
+            // PictureBox_Logo
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(85, 47);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
+            this.PictureBox_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PictureBox_Logo.InitialImage = null;
+            this.PictureBox_Logo.Location = new System.Drawing.Point(85, 47);
+            this.PictureBox_Logo.Name = "PictureBox_Logo";
+            this.PictureBox_Logo.Size = new System.Drawing.Size(150, 150);
+            this.PictureBox_Logo.TabIndex = 32;
+            this.PictureBox_Logo.TabStop = false;
             // 
-            // label12
+            // Label_CompanyName
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Calibri Light", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(270, 47);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(268, 49);
-            this.label12.TabIndex = 33;
-            this.label12.Text = "Synth Solution";
+            this.Label_CompanyName.AutoSize = true;
+            this.Label_CompanyName.Font = new System.Drawing.Font("Calibri Light", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Label_CompanyName.ForeColor = System.Drawing.Color.Black;
+            this.Label_CompanyName.Location = new System.Drawing.Point(270, 47);
+            this.Label_CompanyName.Name = "Label_CompanyName";
+            this.Label_CompanyName.Size = new System.Drawing.Size(268, 49);
+            this.Label_CompanyName.TabIndex = 33;
+            this.Label_CompanyName.Text = "Synth Solution";
             // 
-            // label13
+            // Label_CompanyAddress
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(326, 108);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(259, 23);
-            this.label13.TabIndex = 34;
-            this.label13.Text = "123, Example Street, City, 11552";
+            this.Label_CompanyAddress.AutoSize = true;
+            this.Label_CompanyAddress.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Label_CompanyAddress.ForeColor = System.Drawing.Color.Black;
+            this.Label_CompanyAddress.Location = new System.Drawing.Point(326, 108);
+            this.Label_CompanyAddress.Name = "Label_CompanyAddress";
+            this.Label_CompanyAddress.Size = new System.Drawing.Size(259, 23);
+            this.Label_CompanyAddress.TabIndex = 34;
+            this.Label_CompanyAddress.Text = "123, Example Street, City, 11552";
             // 
-            // label15
+            // Label_CompanyPhone
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(326, 141);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(161, 23);
-            this.label15.TabIndex = 35;
-            this.label15.Text = "+966 123 456 7890";
+            this.Label_CompanyPhone.AutoSize = true;
+            this.Label_CompanyPhone.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Label_CompanyPhone.ForeColor = System.Drawing.Color.Black;
+            this.Label_CompanyPhone.Location = new System.Drawing.Point(326, 141);
+            this.Label_CompanyPhone.Name = "Label_CompanyPhone";
+            this.Label_CompanyPhone.Size = new System.Drawing.Size(161, 23);
+            this.Label_CompanyPhone.TabIndex = 35;
+            this.Label_CompanyPhone.Text = "+966 123 456 7890";
             // 
-            // label16
+            // Label_CompanyEmail
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(326, 174);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(158, 23);
-            this.label16.TabIndex = 36;
-            this.label16.Text = "example@test.com";
+            this.Label_CompanyEmail.AutoSize = true;
+            this.Label_CompanyEmail.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Label_CompanyEmail.ForeColor = System.Drawing.Color.Black;
+            this.Label_CompanyEmail.Location = new System.Drawing.Point(326, 174);
+            this.Label_CompanyEmail.Name = "Label_CompanyEmail";
+            this.Label_CompanyEmail.Size = new System.Drawing.Size(158, 23);
+            this.Label_CompanyEmail.TabIndex = 36;
+            this.Label_CompanyEmail.Text = "example@test.com";
             // 
             // label17
             // 
@@ -615,11 +615,11 @@ namespace Synth
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Label_CompanyEmail);
+            this.Controls.Add(this.Label_CompanyPhone);
+            this.Controls.Add(this.Label_CompanyAddress);
+            this.Controls.Add(this.Label_CompanyName);
+            this.Controls.Add(this.PictureBox_Logo);
             this.Controls.Add(this.Button_Print);
             this.Controls.Add(this.Label_Price);
             this.Controls.Add(this.label14);
@@ -648,9 +648,9 @@ namespace Synth
             this.MinimizeBox = false;
             this.Name = "Form_ViewSale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Print Receipt";
+            this.Text = "a";
             this.Load += new System.EventHandler(this.Form_ViewSale_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -686,11 +686,11 @@ namespace Synth
         private System.Windows.Forms.Button Button_Print;
         private System.Drawing.Printing.PrintDocument PrintDocument;
         private System.Windows.Forms.PrintPreviewDialog PrintPreviewDialog;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.PictureBox PictureBox_Logo;
+        private System.Windows.Forms.Label Label_CompanyName;
+        private System.Windows.Forms.Label Label_CompanyAddress;
+        private System.Windows.Forms.Label Label_CompanyPhone;
+        private System.Windows.Forms.Label Label_CompanyEmail;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;

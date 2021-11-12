@@ -9,6 +9,7 @@ namespace Synth
 {
     public partial class Form_Login : Form
     {
+        readonly string version = "1.5.6";
 
         readonly string deviceId = new DeviceIdBuilder()
             .AddMachineName()
@@ -92,7 +93,7 @@ namespace Synth
 
         private void Form_Login_Load(object sender, EventArgs e)
         {
-            Label_Version.Text += "1.4.20";
+            Label_Version.Text += version;
             Button_Login.Enabled = false;
             LinkLabel_RequestLicense.Visible = true;
 

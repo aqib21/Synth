@@ -152,5 +152,10 @@ namespace Synth
             string search = Textbox_Search.Text;
             RefreshDataGridView(search);
         }
+
+        private void Button_Refresh_Click(object sender, EventArgs e)
+        {
+            RefreshDataGridView("");
+        }
     }
 }
